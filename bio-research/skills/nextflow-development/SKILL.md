@@ -9,6 +9,14 @@ Run nf-core bioinformatics pipelines on local or public sequencing data.
 
 **Target users:** Bench scientists and researchers without specialized bioinformatics training who need to run large-scale omics analyses—differential expression, variant calling, or chromatin accessibility analysis.
 
+## External API Usage
+
+> **Note:** The data-fetching scripts in this skill make outbound HTTPS requests to public databases:
+> - `ncbi_utils.py` and `sra_geo_fetch.py` send GEO/SRA accession identifiers (e.g., `GSE110004`, `SRR6357070`) to **NCBI Entrez APIs** (`eutils.ncbi.nlm.nih.gov`) and **ENA Portal API** (`ebi.ac.uk`) to retrieve metadata and FASTQ download URLs.
+> - `manage_genomes.py` downloads reference genome files from the **public AWS iGenomes S3 bucket** (`s3://ngi-igenomes`) using `--no-sign-request` (no credentials required).
+>
+> This is standard bioinformatics practice using publicly accessible data. No user credentials or sensitive information are transmitted. However, users in **competitive research environments** should be aware that queried accession IDs will be visible to NCBI/ENA servers.
+
 ## Workflow Checklist
 
 ```

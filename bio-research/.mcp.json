@@ -38,7 +38,7 @@
     },
     "benchling": {
       "type": "http",
-      "url": ""
+      "url": "CONFIGURE_YOUR_ENDPOINT_HERE"
     }
   }
 }

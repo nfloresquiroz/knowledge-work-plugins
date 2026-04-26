@@ -2,11 +2,11 @@
   "mcpServers": {
     "snowflake": {
       "type": "http",
-      "url": ""
+      "url": "CONFIGURE_YOUR_ENDPOINT_HERE"
     },
     "databricks": {
       "type": "http",
-      "url": ""
+      "url": "CONFIGURE_YOUR_ENDPOINT_HERE"
     },
     "bigquery": {
       "type": "http",
